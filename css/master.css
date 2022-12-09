@@ -1,0 +1,43 @@
+.wrap, .title, .navbar, .links, .frontImage, .article1 {
+  border: 1px solid black;
+}
+
+body{
+  color: white;
+  background-color: #192269;
+}
+
+.wrap{
+  width: 95%;
+  margin: auto;
+}
+
+.links{
+  display: inline;
+  margin-right: 5%;
+  padding: 1%;
+}
+
+.navbar{
+  text-align: center;
+  padding: 1%;
+  background-color: #424fb3;
+}
+
+.navbar > a{
+  text-decoration: none;
+  color: white;
+}
+
+.navbar > a:hover{
+  text-decoration: underline;
+}
+
+.frontImage{
+  height: 500px;
+}
+
+.article1{
+  width: 90%;
+  margin: auto;
+}
