@@ -2,23 +2,41 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
     <title>Form Page </title>
   </head>
   <body>
+    
+<style>
+    body{
+      color: white;
+      background-color: #192269;
+    }
+
+    div{
+      background-color: #192232;
+      text-align: center;
+      width: 50%;
+      height: 65%;
+      border: 3px solid blue;
+      margin: auto;
+    }
+</style>
+
+<div>
     <h1> Form </h1>
 
     <a href="index.html"> Go Back To Index </a>
 <form>
     <p>
 <label> Enter Your Name:</label>
-  <input id="Name" name=“name” type=“text” size="25" required />
+  <input id="nameid" name=“name” type=“text” size="25" required />
   </p>
 
-  <p> Enter Your Gender:   <!-- I got the code for radio and option from Hamilitons lectures in week 4 -->
+  <p> Enter Your Gender: <!-- I got the code for radio and option from Hamilitons lectures in week 4 -->
 <input type="radio" name="Gender" required>Male
 <input type="radio" name="Gender" required>Female
 </p>
+
 
 <p> Enter Date Of Birth:
   <select name="Days">
@@ -88,26 +106,34 @@
 </p>
 
 <p> Enter Your Email:
-  <input name="Email" type="text" required>
+  <input id="emailid" name="Email" type="text" required>
 </p>
 
 <p> Enter Your Phone Number:
-  <input name="Phone Number" type="text" required>
+  <input id="phoneid" name="Phone Number" type="text" required>
 </p>
-
 
 <input type="button" onclick="MyFunction()" value="Submit Form">
 <input type="reset" name="" value="Reset Form">
 </form>
-    
-<p id="p1" > </p>
 
- <script>
+<p id="p1" > </p>
+</div>
+
+<script>
 function MyFunction(){
-document.getElementById('p1').innerHTML="Thank you";
+let name=document.getElementById('nameid').value;
+let phone=document.getElementById('phoneid').value;
+let email=document.getElementById('emailid').value;
+
+
+if (name.length > 2 && phone.length > 0 && email.length > 0 ){
+  document.getElementById('p1').innerHTML="Thank you";
+}else {
+  document.getElementById('p1').innerHTML="Fill in the form";
+}
 }
 </script>
 
-
- </body>
+</body>
 </html>
