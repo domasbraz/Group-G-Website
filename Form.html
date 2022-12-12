@@ -15,11 +15,10 @@
   <input id="Name" name=“name” type=“text” size="25" required />
   </p>
 
-  <p> Enter Your Gender:
+  <p> Enter Your Gender:   <!-- I got the code for radio and option from Hamilitons lectures in week 4 -->
 <input type="radio" name="Gender" required>Male
 <input type="radio" name="Gender" required>Female
 </p>
-I got this from Hamilitons lectures in week 4
 
 <p> Enter Date Of Birth:
   <select name="Days">
@@ -87,7 +86,6 @@ I got this from Hamilitons lectures in week 4
     <option value="2011"> 2011</option>
   </select>
 </p>
-I got the code for select from w3schools and from Hamiliton
 
 <p> Enter Your Email:
   <input name="Email" type="text" required>
@@ -101,13 +99,15 @@ I got the code for select from w3schools and from Hamiliton
 <input type="button" onclick="MyFunction()" value="Submit Form">
 <input type="reset" name="" value="Reset Form">
 </form>
+    
+<p id="p1" > </p>
 
-<script>
+ <script>
 function MyFunction(){
 document.getElementById('p1').innerHTML="Thank you";
 }
 </script>
 
 
-  </body>
+ </body>
 </html>
