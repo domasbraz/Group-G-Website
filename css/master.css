@@ -38,8 +38,8 @@ body{
 .title > h1{
   display: inline;
   font-family: 'Cinzel', serif;
-  position: relative;
-  top: 10px; 
+  position: relative; /*allows me to adjust the position of the text*/
+  top: 10px; /*centred the text for aesthetic purposes*/
 }
 
 c1{
@@ -60,25 +60,19 @@ c2{
   text-align: center;
   padding: 1%;
   background-color: #424fb3;
-  /*position: sticky;
-  top: 50px;*/
 }
 
 .navbar > a{
-  text-decoration: none;
+  text-decoration: none; /*removes underline*/
   color: white;
 }
 
 .navbar > a:hover{
-  text-decoration: underline;
+  text-decoration: underline; /*adds an underline when mouse is over the link*/
 }
 
-/*.links:hover{
-  background-color: #699ff5;
-}*/
-
 .frontImage{
-  height: 500px;
+  height: 500px; /*matches height of the image used*/
   width: 100%;
   margin: auto;
 }
@@ -93,7 +87,6 @@ c2{
 }
 
 .article2{
-  /*height: 1000px;*/
   width: 70%;
   margin: auto;
 }
@@ -102,8 +95,8 @@ c2{
   text-align: center;
 }
 
+/*added backgound images to the divs so I can add text over them*/
 .gallery1{
-
   height: 600px;
   background-image: url(../images/gallery1.jpg);
 }
@@ -130,9 +123,9 @@ c2{
 }
 
 .gAreas{
-  height: 120%;
+  height: 120%; /*ensures background colour fills whole div*/
   width: 100%;
-  border: 1px solid #00000000 !important;
+  border: 1px solid #00000000 !important; /*!important used to overwrite code, used when border is set for testing*/
   background-color: #00000000;
   padding-right: 15px;
 }
