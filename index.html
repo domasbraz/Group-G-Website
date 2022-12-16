@@ -1,47 +1,281 @@
 <!DOCTYPE html>
+
+<!--this document was made by Domas Brazdeikis x22728815-->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Childrens Charities for Christmas</title>
+    <!--tab icon-->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!--Custom font used in title-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   </head>
+
+  <style> @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+  </style>
 
   <link rel="stylesheet" href="css/master.css">
 
+  <!--gave the index an id so I can change the body of the index without affecting the other pages-->
   <body id="index">
 
+    <!--includes all content of the webpage-->
     <div class="wrap">
 
+      <!--logo and heading-->
       <div class="title">
 
-        <img src="" alt="title image and logo">
+        <img src="images/logo2.png" alt="title image and logo">
+        <!--I used custom tags to change the colours of the title to fit the logo.
+        custom tags were used rather than classes as it was quicker that way rather
+        than assigning a tag with unwanted styling-->
+        <h1><c1>Childrens</c1> <c2>Charities</c2> for <c1>Christmas</c1></h1>
 
       </div>
 
+      <!--used to navigate between pages-->
       <div class="navbar">
 
-        <a href="#"><div class="links">Home</div></a>
-        <a href="#"><div class="links">Home</div></a>
-        <a href="#"><div class="links">Home</div></a>
-        <a href="#"><div class="links">Home</div></a>
+        <!--divs were used here to make it easier to click the links-->
+        <a href="index.html"><div class="links">Home</div></a>
+        <a href="#"><div class="links">Join Us</div></a>
+        <a href="#"><div class="links">Minigame</div></a>
 
       </div>
 
+      <!--opening image to the website-->
       <div class="frontImage">
 
-        <img src="" alt="front image">
+        <img src="images/christmas.jpg" alt="front image">
 
       </div>
 
+      <!--piece of text meant as an introduction-->
       <div class="article1">
 
-        <h1>Heading</h1>
-        <p>Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph
-        Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph
-        Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph </p>
+        <h1>Our Goal</h1>
+        <p>
+          Christmas is a time of family, cheer and giving, but not all can enjoy its festive cheer.
+          There are many children out there suffering, why not lift their spirits by supporting them.
+          There are charities out there that help children in need and our goal is to promote them.
+        </p>
+        <br>
 
       </div>
+
+      <!--the gallery section meant promote charities-->
+      <div class="article2">
+
+        <p>
+          Here are some charities you can donate to:
+          <br>
+          (Click the images for information.)
+        </p>
+
+        <!--image grid-->
+        <div class="row">
+
+          <div class="column">
+
+            <!--two classes assigned to div, onclcick triggers animation using js-->
+            <div class="galleries gallery1" onclick="gal1()">
+
+              <!--div used for animation purposes-->
+              <div id="area1" class="gAreas">
+
+                <!--div housing a paragraph-->
+                <p id="para1" class="gParas">
+                  <!--custom tag for heading was used instead of <h1> as it included unwanted styling
+                  target="_blank" opens link in new tab-->
+                  <a href="https://www.unicef.org" target="_blank"><myHeading>UNICEF</myHeading></a>
+                  A big organisation that works around world to
+                  help children in need. They offer many many
+                  different services for children to help them
+                  grow and learn.
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <!--classes and id names are like this because of how the grid works
+            the fifth gallery was placed in second column to fit in empty space-->
+            <div class="galleries gallery3" onclick="gal3()">
+
+              <div id="area3" class="gAreas">
+
+                <p id="para3" class="gParas">
+                  <a href="https://www.barnardos.ie" target="_blank"><myHeading>Barnardos</myHeading></a>
+                  An Irish organisation set on helping children
+                  all over Ireland. They offer many different
+                  services from financial suport to personal
+                  development.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="column">
+
+            <div class="galleries gallery2" onclick="gal2()">
+
+              <div id="area2" class="gAreas">
+
+                <p id="para2" class="gParas">
+                  <a href="https://www.jackandjill.ie" target="_blank"><myHeading>Jack and Jill</myHeading></a>
+                  An Irish organisation that aims at helping
+                  infants with mental development difficulties.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="galleries gallery4" onclick="gal4()">
+
+              <div id="area4" class="gAreas">
+
+                <p id="para4" class="gParas">
+                  <a href="https://www.makeawish.ie" target="_blank"><myHeading>Make-A-Wish Ireland</myHeading></a>
+                  You may have heard of the popular American
+                  charity, "Make A Wish", well they have an
+                  affiliate here in Ireland. They try to bring
+                  happiness to children with life-threatening
+                  medical conditions by fulfilling their wish.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="galleries gallery5" onclick="gal5()">
+
+              <div id="area5" class="gAreas">
+
+                <p id="para5" class="gParas">
+                  <a href="https://www.childrenshealth.ie" target="_blank"><myHeading>Children's Health Foundation</myHeading></a>
+                  Medical care can be expensive, this Irish
+                  organisation aims at providing vital funds
+                  to children so they get the proper health
+                  care they deserve.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--div used as replacement when viewing on mobile device-->
+        <div class="row" id="alt">
+
+          <div class="column">
+
+            <div class="galleries gallery1" onclick="galAlt1()">
+
+              <div id="areaAlt1" class="gAreas">
+
+                <p id="paraAlt1" class="gParas">
+                  <a href="https://www.unicef.org" target="_blank"><myHeading>UNICEF</myHeading></a>
+                  A big organisation that works around world to
+                  help children in need. They offer many many
+                  different services for children to help them
+                  grow and learn.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="galleries gallery2" onclick="galAlt2()">
+
+              <div id="areaAlt2" class="gAreas">
+
+                <p id="paraAlt2" class="gParas">
+                  <a href="https://www.jackandjill.ie" target="_blank"><myHeading>Jack and Jill</myHeading></a>
+                  An Irish organisation that aims at helping
+                  infants with mental development difficulties.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="galleries gallery3" onclick="galAlt3()">
+
+              <div id="areaAlt3" class="gAreas">
+
+                <p id="paraAlt3" class="gParas">
+                  <a href="https://www.barnardos.ie" target="_blank"><myHeading>Barnardos</myHeading></a>
+                  An Irish organisation set on helping children
+                  all over Ireland. They offer many different
+                  services from financial suport to personal
+                  development.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="galleries gallery4" onclick="galAlt4()">
+
+              <div id="areaAlt4" class="gAreas">
+
+                <p id="paraAlt4" class="gParas">
+                  <a href="https://www.makeawish.ie" target="_blank"><myHeading>Make-A-Wish Ireland</myHeading></a>
+                  An affiliate of the Charity "Make-A-Wish", based in
+                  America. They try to bring happiness to children with
+                  life-threatening medical conditions by fulfilling their wish.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="galleries gallery5" onclick="galAlt5()">
+
+              <div id="areaAlt5" class="gAreas">
+
+                <p id="paraAlt5" class="gParas">
+                  <a href="https://www.childrenshealth.ie" target="_blank"><myHeading>Children's Health Foundation</myHeading></a>
+                  Medical care can be expensive, this Irish
+                  organisation aims at providing vital funds
+                  to children so they get the proper health
+                  care they deserve.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+      <div class="footer">
+      CCChristmas&copy
+    </div>
 
     </div>
 
   </body>
+
+  <!--external js file because there was too much code and it would look too messy if it was kept interanlly-->
+  <script src="js/script.js" charset="utf-8"></script>
+
 </html>

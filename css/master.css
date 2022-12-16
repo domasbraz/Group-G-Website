@@ -1,15 +1,53 @@
-.wrap, .title, .navbar, .links, .frontImage, .article1 {
-  border: 1px solid black;
-}
+/*made by Domas Brazdeikis x22728815
 
+makes the divs more visible
+used for testing purposes
+#index div{
+  border: 1px solid black;
+}*/
+
+/*theme*/
 body{
   color: white;
   background-color: #192269;
+  font-family: calibri;
+}
+
+/*padding and margin were changed so that divs can take the full width of the page*/
+#index{
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .wrap{
-  width: 95%;
+  width: 100%;
   margin: auto;
+  overflow: hidden; /*prevent any content being outside the page*/
+}
+
+.title{
+  overflow: auto; /*prevents logo from leaving the div*/
+  text-align: center;
+}
+
+.title > img{
+  float: left;
+}
+
+.title > h1{
+  display: inline;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  top: 10px; 
+}
+
+c1{
+  color: #115710;
+}
+
+c2{
+  color: #9c1a10;
 }
 
 .links{
@@ -22,6 +60,8 @@ body{
   text-align: center;
   padding: 1%;
   background-color: #424fb3;
+  /*position: sticky;
+  top: 50px;*/
 }
 
 .navbar > a{
@@ -33,11 +73,263 @@ body{
   text-decoration: underline;
 }
 
+/*.links:hover{
+  background-color: #699ff5;
+}*/
+
 .frontImage{
   height: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.frontImage > img{
+  width: 100%;
 }
 
 .article1{
-  width: 90%;
+  width: 80%;
   margin: auto;
+}
+
+.article2{
+  /*height: 1000px;*/
+  width: 70%;
+  margin: auto;
+}
+
+.article2 > p{
+  text-align: center;
+}
+
+.gallery1{
+
+  height: 600px;
+  background-image: url(../images/gallery1.jpg);
+}
+
+.gallery2{
+  height: 269px;
+  background-image: url(../images/gallery2.jpg);
+}
+
+.gallery3{
+  height: 267px;
+  background-image: url(../images/gallery3.jpg);
+
+}
+
+.gallery4{
+  height: 267px;
+  background-image: url(../images/gallery4.jpg);
+}
+
+.gallery5{
+  height: 267px;
+  background-image: url(../images/gallery5.jpg);
+}
+
+.gAreas{
+  height: 120%;
+  width: 100%;
+  border: 1px solid #00000000 !important;
+  background-color: #00000000;
+  padding-right: 15px;
+}
+
+.gParas{
+  position: relative;
+  display: none;
+  font-size: 18px;
+  width: 80%;
+}
+
+.galleries{
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@keyframes contrastOn {
+  from {background-color: #00000000;}
+  to {background-color: #00000080;}
+}
+
+@keyframes contrastOff {
+  from {background-color: #00000080;}
+  to {background-color: #00000000;}
+}
+
+@keyframes textOn {
+  from {right: 400px;}
+  to {right: -10px;}
+}
+
+@keyframes textOff {
+  from {right: -10px;}
+  to {right : 400px;}
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+
+  display: flex;
+
+  flex-wrap: wrap;
+  padding: 0 4px;
+  width: 800px;
+  margin: auto;
+
+}
+
+#alt{
+  display: none;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column > div {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border: 0 !important;
+}
+
+myHeading{
+  display: block;
+  font-size: 40px;
+}
+
+.gParas > a{
+  text-decoration: underline;
+  color: #00ff44;
+}
+
+.gParas > a:hover{
+  text-decoration: underline;
+}
+
+.footer{
+  width: 100%;
+  padding-left: 10px;
+  background-color: #222940;
+  /*border: 1px solid black;*/
+}
+
+@media screen and (max-width: 780px){
+  .title > h1{
+    font-size: 40px;
+    top: -5px;
+  }
+
+  .frontImage{
+    height: 274px;
+  }
+
+  .frontImage > img{
+    content: url(../images/christmas-tablet.jpg)
+  }
+
+  .row{
+    display: none;
+  }
+
+  #alt{
+    display: block;
+    width: 400px;
+  }
+
+}
+
+@media screen and (max-width: 430px){
+  .title > h1{
+    font-size: 20px;
+    top: -10px;
+  }
+
+  .title > img{
+    display: inline;
+    content: url(../images/logo-rwd.png);
+  }
+
+  .navbar{
+    font-size: 20px;
+  }
+
+  .frontImage{
+    height: 152px;
+  }
+
+  .frontImage > img{
+    content: url(../images/christmas-phone.jpg)
+  }
+
+  .article1{
+    font-size: 20px;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .article2{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 380px){
+  #alt{
+    width: 350px;
+  }
+
+  .gallery1{
+    height: 525px;
+    background-image: url(../images/gallery1-phoneM.jpg);
+  }
+
+  .gallery2{
+    height: 235px;
+    background-image: url(../images/gallery2-phoneM.jpg);
+  }
+
+  .gallery3{
+    height: 233px;
+    background-image: url(../images/gallery3-phoneM.jpg);
+  }
+
+  .gallery4{
+    height: 233px;
+    background-image: url(../images/gallery4-phoneM.jpg);
+  }
+
+  .gallery5{
+    height: 233px;
+    background-image: url(../images/gallery5-phoneM.jpg);
+  }
+
+  .gAreas{
+    padding-right: 10px;
+  }
+
+/*  #paraAlt4 :not(a){
+    line-height: 50%;
+  }*/
+
+  myHeading{
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 325px){
+  #alt{
+    width: 300px;
+  }
 }
