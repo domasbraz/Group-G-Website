@@ -36,8 +36,7 @@ body{
 
 .title > img{
   float: left;
-  width: auto;
-  height: auto;
+  height: 100%;
 }
 
 .title > h1{
