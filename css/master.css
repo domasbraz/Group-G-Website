@@ -343,6 +343,12 @@ myHeading{
 .gWrapper :not(.footer){
   text-align: center;
 }
+
+.img1, img2{
+  width: 112px;
+  height: 112px;
+}
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 .gWrapper{
   width: 800px;
