@@ -830,15 +830,15 @@ function rollDice() {
   // this allowed me to use less IDs and classes , i learned of querySelector through w3schools
 
   if (randomNumber1 === randomNumber2) {
-    document.querySelector("h3").innerHTML = "It's a Draw!";
+    document.querySelector("h2").innerHTML = "It's a Draw!";
   }
 
   else if (randomNumber1 < randomNumber2) {
-    document.querySelector("h3").innerHTML  = (computer + " WINS!");
+    document.querySelector("h2").innerHTML  = (computer + " WINS!");
   }
 
   else {
-    document.querySelector("h3").innerHTML  = (player + " WINS!");
+    document.querySelector("h2").innerHTML  = (player + " WINS!");
   }
   // this shows the outcome of each game
   // this is how game functions
