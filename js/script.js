@@ -799,7 +799,7 @@ function galleryAlt5Text()
 }*/
 
 
-
+//lines 803-847 made by Evan O Neill X22527456
 var player = "player";
 var computer = "computer";
 
@@ -844,4 +844,21 @@ function rollDice() {
   // this is how game functions
   // i got the idea for the random number generator and queryselectors from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
   // i didnt use alot of stuff from the website above as it overcomplacited my code and i didnt think it was neccesary for the functionality of the game
+}
+
+//lines 850-864 made by Alex Garbalyauskas x22440482
+/*this JavaScript code is part of the valdiation of the form.
+it sends a message to the user demanding him to fill in the form if he presses submit without filling in the form,
+it will send a message stating "thank you" if you do fill in the form*/
+function MyFunction(){
+let name=document.getElementById('nameid').value;
+let phone=document.getElementById('phoneid').value;
+let email=document.getElementById('emailid').value;
+
+
+if (name.length > 2 && phone.length > 0 && email.length > 0 ){
+  document.getElementById('p1').innerHTML="Thank you";
+}else {
+  document.getElementById('p1').innerHTML="Please fill the whole form";
+}
 }

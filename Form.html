@@ -7,35 +7,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/master.css">
-    <title>Form Page </title>
+    <title>Join Us</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   </head>
   <body>
 
-<style>
-    body{
-      color: white;
-      background-color: #192269;
-    }
+<link rel="stylesheet" href="css/master.css">
 
-    div{
-      background-color: #192232;
-      text-align: center;
-      width: 50%;
-      height: 65%;
-      border: 3px solid blue;
-      margin: auto;
-    }
-</style>
+<div class="title">
 
-<div>
-    <h1> Form </h1>
+  <img src="images/logo2.png" alt="title image and logo">
+  <h1><c1>Childrens</c1> <c2>Charities</c2> for <c1>Christmas</c1></h1>
+
+</div>
+
+<div class="navbar">
+
+  <a href="index.html"><div class="links">Home</div></a>
+  <a href="Form.html"><div class="links">Join Us</div></a>
+  <a href="miniGame.html"><div class="links">Minigame</div></a>
+
+</div>
+<div class="fWrapper">
+    <h1>Sign up now</h1>
 
     <!-- anchor tag back to the index -->
-<a href="index.html"> Go Back To Index </a>
 <form>
     <p>
 <label> Enter Your Name:</label>
-  <input id="nameid" name=“name” type=“text” size="25" required />
+  <input id="nameid" name=“name” type=“text” required />
   </p>
 
 <!-- I decided to use radio buttons, option lists and text boxes for my form -->
@@ -126,24 +130,11 @@
 
 <p id="p1" > </p>
 </div>
+<div class="footer">
+  CCChristmas&copy
+</div>
 
-<!-- this JavaScript code is part of the valdiation of the form.
- it sends a message to the user demanding him to fill in the form if he presses submit without filling in the form,
-  it will send a message stating "thank you" if you do fill in the form -->
-<script>
-function MyFunction(){
-let name=document.getElementById('nameid').value;
-let phone=document.getElementById('phoneid').value;
-let email=document.getElementById('emailid').value;
-
-
-if (name.length > 2 && phone.length > 0 && email.length > 0 ){
-  document.getElementById('p1').innerHTML="Thank you";
-}else {
-  document.getElementById('p1').innerHTML="Fill in the form";
-}
-}
-</script>
+<script src="js/script.js" charset="utf-8"></script>
 
 </body>
 </html>

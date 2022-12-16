@@ -337,11 +337,6 @@ myHeading{
   }
 }
 
-.footer:not(#index > .footer){
-  position: sticky;
-  bottom: 0;
-}
-
 .gWrapper :not(.footer){
   text-align: center;
 }
@@ -379,4 +374,14 @@ border: 2px solid #c3c3c3;
   font-family: 'Roboto Slab', serif;
 }
 
+}
+
+
+.fWrapper{
+  background-color: #192232;
+  text-align: center;
+  width: 80%;
+  height: 65%;
+  border: 3px solid blue;
+  margin: auto;
 }
