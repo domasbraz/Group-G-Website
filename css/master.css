@@ -36,7 +36,8 @@ body{
 
 .title > img{
   float: left;
-  height: 100%;
+  width: 163px;
+  height: 100px;
 }
 
 .title > h1{
@@ -89,6 +90,7 @@ c2{
 
 .frontImage > img{
   width: 100%;
+  height: 500px;
 }
 
 .article1{
