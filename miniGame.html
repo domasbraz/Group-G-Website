@@ -7,65 +7,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- this web page was made by Evan O'Neill student number:X22527456 -->
 <style>
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-.gWrapper{
-  width: 800px;
-    height: 7000px;
-    border: 7px solid #c3c3c3;
-    text-align: center;
-    font-size: 50px
-}
 
-.gameHeader{
-  font-size: 100px;
-  font-family: 'Roboto Slab', serif;
-}
-
-}
-
-@media only screen and (min-device-width : 321px) and (max-device-width : 767px) {
-.gWrapper{
-width: 700px;
-height: 7000px;
-border: 2px solid #c3c3c3;
-text-align: center;
-}
-
-.gameHeader{
-  font-size: 60px;
-  font-family: 'Roboto Slab', serif;
-}
-}
-
-@media only screen and (max-width : 320px) {
-.gameHeader{
-  font-size: 20px;
-  font-family: 'Roboto Slab', serif;
-}
-.gWrapper{
-  text-align: center;
-}
-}
 
 </style>
 <!-- this is an internal css because i dont want the same changes as the other web pages when they chang scale -->
-    
+
 <link rel="stylesheet" href="css/master.css">
 
 <div class="gWrapper">
   <!-- this class and div is to style everthing inside this webpage and to also make it responsive -->
-  
+
   <div class="title">
 
-        <img src="images/logo2.png" alt="title image and logo">
-        <h1><c1>Childrens</c1> <c2>Charities</c2> for <c1>Christmas</c1></h1>
+    <img src="images/logo2.png" alt="title image and logo">
+    <h1><c1>Childrens</c1> <c2>Charities</c2> for <c1>Christmas</c1></h1>
 
   </div>
-  
+
   <div class="navbar">
 
         <a href="index.html"><div class="links">Home</div></a>
@@ -73,7 +38,7 @@ text-align: center;
         <a href="miniGame.html"><div class="links">Minigame</div></a>
 
       </div>
-  
+
 <div class="users">
 
 <h3 class="gameHeader">Dice Game!!!</h3>
@@ -107,64 +72,17 @@ text-align: center;
   </button>
   <!-- this button is to change "player" username aka your username -->
 </div>
-  
+
   <div class="footer">
-      CCChristmas&copy
-    </div>
+    CCChristmas&copy
+  </div>
 
 </div>
 
 
 
-<script type="text/javascript">
-
-var player = "player";
-var computer = "computer";
-
-function editName() {
-
-player = prompt("change your username:");
+<script src="js/script.js" charset="utf-8"></script>
 
 
-document.getElementById("player").innerHTML= player
-
-//this is to change username by using the change your username button
-// i got the idea for this in slides from javascript in web design
-// i used an ID instead of class because i had to use that Player multiple times in the script as you see below
-
-}
-
-  function rollDice() {
-
-          var randomNumber1 = Math.floor(Math.random() * 6) + 1;
-          var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-          // there is two randomNumber generators so i get two different numbers so the game doesnt always end in a draw
-
-          document.querySelector(".img1").setAttribute("src", "dice" + randomNumber1 + ".png");
-
-          document.querySelector(".img2").setAttribute("src", "dice" + randomNumber2 + ".png");
-              //these two lines above  change the images to by using the number generated above
-              //i used querySelector here as i found it more useful to code then lines like getElementById it also gave me less to code
-              // this allowed me to use less IDs and classes , i learned of querySelector through w3schools
-
-          if (randomNumber1 === randomNumber2) {
-              document.querySelector("h3").innerHTML = "Its a Draw!";
-          }
-
-          else if (randomNumber1 < randomNumber2) {
-              document.querySelector("h3").innerHTML  = (computer + " WINS!");
-          }
-
-          else {
-              document.querySelector("h3").innerHTML  = (player + " WINS!");
-          }
-          // this shows the outcome of each game
-// this is how game functions
-// i got the idea for the random number generator and queryselectors from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
-// i didnt use alot of stuff from the website above as it overcomplacited my code and i didnt think it was neccesary for the functionality of the game
-    }
-</script>
-
-
-  </body>
+</body>
 </html>

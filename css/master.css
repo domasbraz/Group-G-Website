@@ -11,6 +11,9 @@ body{
   color: white;
   background-color: #192269;
   font-family: calibri;
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 /*padding and margin were changed so that divs can take the full width of the page*/
@@ -38,8 +41,8 @@ body{
 .title > h1{
   display: inline;
   font-family: 'Cinzel', serif;
-  position: relative; /*allows me to adjust the position of the text*/
-  top: 10px; /*centred the text for aesthetic purposes*/
+  position: relative;
+  top: 10px;
 }
 
 c1{
@@ -60,19 +63,25 @@ c2{
   text-align: center;
   padding: 1%;
   background-color: #424fb3;
+  /*position: sticky;
+  top: 50px;*/
 }
 
 .navbar > a{
-  text-decoration: none; /*removes underline*/
+  text-decoration: none;
   color: white;
 }
 
 .navbar > a:hover{
-  text-decoration: underline; /*adds an underline when mouse is over the link*/
+  text-decoration: underline;
 }
 
+/*.links:hover{
+  background-color: #699ff5;
+}*/
+
 .frontImage{
-  height: 500px; /*matches height of the image used*/
+  height: 500px;
   width: 100%;
   margin: auto;
 }
@@ -87,6 +96,7 @@ c2{
 }
 
 .article2{
+  /*height: 1000px;*/
   width: 70%;
   margin: auto;
 }
@@ -95,8 +105,8 @@ c2{
   text-align: center;
 }
 
-/*added backgound images to the divs so I can add text over them*/
 .gallery1{
+
   height: 600px;
   background-image: url(../images/gallery1.jpg);
 }
@@ -123,9 +133,9 @@ c2{
 }
 
 .gAreas{
-  height: 120%; /*ensures background colour fills whole div*/
+  height: 120%;
   width: 100%;
-  border: 1px solid #00000000 !important; /*!important used to overwrite code, used when border is set for testing*/
+  border: 1px solid #00000000 !important;
   background-color: #00000000;
   padding-right: 15px;
 }
@@ -325,4 +335,48 @@ myHeading{
   #alt{
     width: 300px;
   }
+}
+
+.footer:not(#index > .footer){
+  position: sticky;
+  bottom: 0;
+}
+
+.gWrapper :not(.footer){
+  text-align: center;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+.gWrapper{
+  width: 800px;
+    /*height: 7000px;
+    border: 7px solid #c3c3c3;*/
+    margin: auto;
+}
+
+.gameHeader{
+  font-size: 100px;
+  font-family: 'Roboto Slab', serif;
+}
+
+}
+
+@media screen and (min-device-width : 321px) and (max-device-width : 767px) {
+/*.gWrapper{
+width: 700px;
+/*height: 7000px;
+border: 2px solid #c3c3c3;
+}*/
+
+.gameHeader{
+  font-size: 60px;
+  font-family: 'Roboto Slab', serif;
+}
+}
+
+@media only screen and (max-width : 320px) {
+.gameHeader{
+  /*font-size: 20px;*/
+  font-family: 'Roboto Slab', serif;
+}
+
 }

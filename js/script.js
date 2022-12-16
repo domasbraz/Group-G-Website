@@ -797,3 +797,51 @@ function galleryAlt5Text()
   }
 
 }*/
+
+
+
+var player = "player";
+var computer = "computer";
+
+function editName() {
+
+player = prompt("change your username:");
+
+
+document.getElementById("player").innerHTML= player;
+
+//this is to change username by using the change your username button
+// i got the idea for this in slides from javascript in web design
+// i used an ID instead of class because i had to use that Player multiple times in the script as you see below
+}
+
+
+function rollDice() {
+
+  var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+  var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+  // there is two randomNumber generators so i get two different numbers so the game doesnt always end in a draw
+
+  document.querySelector(".img1").setAttribute("src", "images/dice" + randomNumber1 + ".png");
+
+  document.querySelector(".img2").setAttribute("src", "images/dice" + randomNumber2 + ".png");
+  //these two lines above  change the images to by using the number generated above
+  //i used querySelector here as i found it more useful to code then lines like getElementById it also gave me less to code
+  // this allowed me to use less IDs and classes , i learned of querySelector through w3schools
+
+  if (randomNumber1 === randomNumber2) {
+    document.querySelector("h3").innerHTML = "It's a Draw!";
+  }
+
+  else if (randomNumber1 < randomNumber2) {
+    document.querySelector("h3").innerHTML  = (computer + " WINS!");
+  }
+
+  else {
+    document.querySelector("h3").innerHTML  = (player + " WINS!");
+  }
+  // this shows the outcome of each game
+  // this is how game functions
+  // i got the idea for the random number generator and queryselectors from https://www.geeksforgeeks.org/building-a-dice-game-using-javascript/
+  // i didnt use alot of stuff from the website above as it overcomplacited my code and i didnt think it was neccesary for the functionality of the game
+}
