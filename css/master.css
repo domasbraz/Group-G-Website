@@ -1,4 +1,4 @@
-/*made by Domas Brazdeikis x22728815
+/*line 1-344 by Domas Brazdeikis x22728815
 
 makes the divs more visible
 used for testing purposes
@@ -12,14 +12,7 @@ body{
   background-color: #192269;
   font-family: calibri;
   font-size: 30px;
-  padding: 0;
-  margin: 0;
-}
-
-/*padding and margin were changed so that divs can take the full width of the page*/
-#index{
-  font-size: 30px;
-  padding: 0;
+  padding: 0; /*padding and margin were changed so that divs can take the full width of the page*/
   margin: 0;
 }
 
@@ -42,11 +35,12 @@ body{
 
 .title > h1{
   display: inline;
-  font-family: 'Cinzel', serif;
-  position: relative;
-  top: 10px;
+  font-family: 'Cinzel', serif; /*custom font*/
+  position: relative; /*changed so I can reposition the text*/
+  top: 10px;  /*adjusted position to look more centered*/
 }
 
+/*title colours*/
 c1{
   color: #115710;
 }
@@ -65,22 +59,16 @@ c2{
   text-align: center;
   padding: 1%;
   background-color: #424fb3;
-  /*position: sticky;
-  top: 50px;*/
 }
 
 .navbar > a{
-  text-decoration: none;
+  text-decoration: none; /*removes underline*/
   color: white;
 }
 
 .navbar > a:hover{
   text-decoration: underline;
 }
-
-/*.links:hover{
-  background-color: #699ff5;
-}*/
 
 .frontImage{
   height: 500px;
@@ -99,7 +87,6 @@ c2{
 }
 
 .article2{
-  /*height: 1000px;*/
   width: 70%;
   margin: auto;
 }
@@ -138,13 +125,13 @@ c2{
 .gAreas{
   height: 120%;
   width: 100%;
-  border: 1px solid #00000000 !important;
-  background-color: #00000000;
-  padding-right: 15px;
+  border: 1px solid #00000000 !important; /*!important used to overwrite any other borders applied to the element, used when testing div locations via borders*/
+  background-color: #00000000; /*0 opacity background = transparent*/
+  padding-right: 15px; /*prevents text from going past div*/
 }
 
 .gParas{
-  position: relative;
+  position: relative; /*animation purposes*/
   display: none;
   font-size: 18px;
   width: 80%;
@@ -152,9 +139,10 @@ c2{
 
 .galleries{
   overflow: hidden;
-  cursor: pointer;
+  cursor: pointer; /*cursor type when hovering over the div*/
 }
 
+/*animations used*/
 @keyframes contrastOn {
   from {background-color: #00000000;}
   to {background-color: #00000080;}
@@ -173,33 +161,30 @@ c2{
 @keyframes textOff {
   from {right: -10px;}
   to {right : 400px;}
-
 }
 
+/*lines 168-184 taken from w3schools with minor adjustments
+https://www.w3schools.com/howto/howto_js_image_grid.asp#gsc.tab=0&gsc.q=css%20important*/
 * {
   box-sizing: border-box;
 }
 
 .row {
-
   display: flex;
-
   flex-wrap: wrap;
   padding: 0 4px;
   width: 800px;
   margin: auto;
-
-}
-
-#alt{
-  display: none;
 }
 
 /* Create two equal columns that sits next to each other */
 .column {
-
   flex: 50%;
   padding: 0 4px;
+}
+
+#alt{ /*used in rwd*/
+  display: none;
 }
 
 .column > div {
@@ -227,7 +212,6 @@ myHeading{
   width: 100%;
   padding-left: 10px;
   background-color: #181b27;
-  /*border: 1px solid black;*/
 }
 
 @media screen and (max-width: 780px){
@@ -325,10 +309,6 @@ myHeading{
     padding-right: 10px;
   }
 
-/*  #paraAlt4 :not(a){
-    line-height: 50%;
-  }*/
-
   myHeading{
     font-size: 30px;
   }
@@ -349,10 +329,11 @@ myHeading{
   height: 112px;
 }
 
+/*lines 333-368 by Evan O Neill x22527456*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 .gWrapper{
   width: 800px;
-    /*height: 7000px;
+    /*height: 7000px; Domas: removed because height too high and not needed, border does not fit the theme*/
     border: 7px solid #c3c3c3;*/
     margin: auto;
 }
@@ -365,7 +346,8 @@ myHeading{
 }
 
 @media screen and (min-device-width : 321px) and (max-device-width : 767px) {
-/*.gWrapper{
+/*Domas: removed because not needed and causing issues
+ .gWrapper{
 width: 700px;
 /*height: 7000px;
 border: 2px solid #c3c3c3;
@@ -385,7 +367,7 @@ border: 2px solid #c3c3c3;
 
 }
 
-
+/*lines 371-378 by Alex Garbalyauskas x22440482*/
 .fWrapper{
   background-color: #192232;
   text-align: center;
