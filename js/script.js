@@ -1,4 +1,4 @@
-//made by Domas Brazdeikis x22728815
+//lines 1-799 by Domas Brazdeikis x22728815
 
 //declaring multiple variables at once
 var on1, on2, on3, on4, on5;
